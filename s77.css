@@ -1,0 +1,38 @@
+body {
+	font-family: monospace;
+	background-color: black;
+	color: #C1C1C1;
+}
+p, li { text-align: justify; }
+h1 {
+	font-size: 100%;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#main {
+	width: 30em;
+	margin: auto;	
+}
+strong, th { color: white; }
+.success { font-weight: bold; color: #77FF69; }
+.fail { font-weight: bold; color: #FF6C69; }
+em, a[href]:hover {
+	font-style: normal;
+	color: black;
+	background: white;
+}
+.inset {
+	margin-left: .5em;
+}
+a[href] {
+	color: white;
+}
+th {
+	text-align: right;
+	padding-right: 1em;
+}
+#toolbar { text-align: center; }
+#toolbar > div {
+	display: inline-block;
+	padding: 1em;
+}
