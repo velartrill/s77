@@ -31,6 +31,12 @@ th {
 	text-align: right;
 	padding-right: 1em;
 }
+td, th {
+	vertical-align: top;
+}
+.chatlog td, .chatlog th {
+	padding: .2em .5em;
+}
 #toolbar { text-align: center; }
 #toolbar > div {
 	display: inline-block;

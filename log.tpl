@@ -59,7 +59,7 @@ arr.each { |x| feed << x}
 
 <div id="toolbar">
 	<div><em>^I</em> <a accesskey="i" href="index.html">FileIndex</a></div>
-	<div><em>^H</em> <a accesskey="h" href="s77.html">ParentFile</a></div>
+	<div><em>^H</em> <a accesskey="h" href="F04.77.html">ParentFile</a></div>
 	<div><em>^Q</em> <a accesskey="q" href="logout.html">LogOut</a></div>
 </div>
 
