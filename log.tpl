@@ -1,14 +1,6 @@
 <% 
 require 'json'
 doc = JSON.parse(File.open("s77.tweets").read)
-arr=[]
-doc.each { |s|
-	txt=s['text'].to_s.gsub("\n","<br>")
-	arr.push "<div class=\"msg\"><div class=\"time\"><a href=\"https://twitter.com/substation77/status/"+s['id'].to_s+"\">"+s['id'].to_s+"</a> // "+s['created_at'].to_s+"</div>"+txt+"</div>\n"
-}
-arr.reverse!
-feed = ""
-arr.each { |x| feed << x}
 %>
 <!doctype html>
 <html>
@@ -33,8 +25,8 @@ arr.each { |x| feed << x}
 	<tr><th>SECURITY CLASS</th><td>TEMPEST KESTREL</td></tr>
 </table>
 <table style="padding-bottom: .5em">
-	<tr><th>SUBFILE IDENTIFIER</th> <td>F04.77.1</td></tr>
-	<tr><th>SUBFILE TITLE</th><td>"Comms Traffic"</td></tr>
+	<tr><th>SUBFILE IDENTIFIER</th> <td>F04.77.1.0</td></tr>
+	<tr><th>SUBFILE TITLE</th><td>"Comms Traffic :: INDEX"</td></tr>
 	<tr><th>SECURITY CLASS</th><td>TORNADO PIGEON</td></tr>
 </table>
 <table style="padding-bottom: .5em">
@@ -54,7 +46,14 @@ arr.each { |x| feed << x}
 <ul><li>Displaying file</li></ul>
 <h1>Substation 77 / Comms Traffic</h1>
 <div class="inset">
-<%=feed%>
+<% doc.reverse_each { |s| txt=s['text'].to_s.gsub("\n","<br>") %>
+	<div class="msg" id="<%=s['id'].to_s%>">
+		<div class="time">
+			<a href="https://twitter.com/substation77/status/<%=s['id'].to_s%>">F04.77.1.<%=s['id'].to_s%></a> // <a href="#<%=s['id'].to_s%>"><%=s['created_at'].to_s%></a>
+		</div>
+		<%=txt%>
+	</div>
+<% } %>
 </div>
 
 <div id="toolbar">

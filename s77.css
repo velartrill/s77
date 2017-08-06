@@ -42,3 +42,22 @@ td, th {
 	display: inline-block;
 	padding: 1em;
 }
+.whitebox, .blackbox {
+	width: 20em;
+	margin: auto;
+	text-align: center;
+}
+.whitebox {
+	color: black;
+	background-color: white;
+	padding: .5em;
+}
+.whitebox h1 {
+	color: black;
+	border-bottom: 1px solid black;
+	margin-top: 0;
+	margin-bottom: .3em;
+}
+.blackbox {
+	border: 1px solid white;
+}
