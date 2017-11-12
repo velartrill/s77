@@ -46,7 +46,7 @@ doc = JSON.parse(File.open("s77.tweets").read)
 <ul><li>Displaying file</li></ul>
 <h1>Substation 77 / Comms Traffic</h1>
 <div class="inset">
-<% doc.reverse_each { |s| txt=s['text'].to_s.gsub("\n","<br>") %>
+<% doc.reverse_each { |s| txt=s['full_text'].to_s.gsub("\n","<br>") %>
 	<div class="msg" id="<%=s['id'].to_s%>">
 		<div class="time">
 			<a href="https://twitter.com/substation77/status/<%=s['id'].to_s%>">F04.77.1.<%=s['id'].to_s%></a> // <a href="#<%=s['id'].to_s%>"><%=s['created_at'].to_s%></a>
